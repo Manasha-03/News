@@ -1,29 +1,55 @@
-//news app fetching headlines from newsAPI
-const { useState } = require("react");
-function newsapp()
-{
-const [list,setList] = useState ("");
-const [news,setnews] = useState([]);
-const [headline,setheadline] = useState(-1);
-fuction news()
-{
-  if(news=== "")
-    return 
-  if(headline === -1)
+import {useState} from "react";
+function App() {
+ const[news , setNews] = useState("");
+ const[headline ,setheadline] = useState("");
+const [result, setResult] = useState(""); 
+const [category, setCategory] = useState("");
+
+const displaynews
+if (news[headline]) 
   {
-   setList([...list,news]);
-  }
-  else{
-    list[news] === headlines;
-    setNews = headlines;
-    setlist = -1;
-  }
+setResult("enter a news"
+setCategory("");
+return;
 }
-function async{
-  app.JSON await{
-    uri=newsAPI.org(http:newsapi.org/docs)
-  }
+};
+
+const reset = () => {
+setResult("");
+setCategory("");
+};
+
+return ( <div className="container"> <div className="newscard"> <h1>headLines</h1>
+
+```
+    <div className="input-group">
+      <label>Headline </label>
+      <input
+        type="text"
+        placeholder="today News"
+        value={headlene};
+        onChange={(e) => headline (e.target.value)}
+      />
+    </div>
+
+    <div className="buttons">
+      <button onClick={News       }>Today headlines      </button>
+      <button className="reset-btn" onClick={reset}>
+        Reset
+      </button>
+    </div>
+
+    {result && (
+      <div className="result">
+        <h2>TodayNews{result}</h2>
+        <p>{category}</p>
+      </div>
+    )}
+  </div>
+</div>
+```)
+
+);
 }
-return(
-  news onchange = headlines(url)
-  <button Onclick>news</button>
+
+export default App;
